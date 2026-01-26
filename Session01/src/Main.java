@@ -220,7 +220,6 @@ public class Main {
             return;
         }
 
-        // bai 7
         int shelf = (stt - 1) / 25 + 1;
         int position = (stt - 1) % 25 + 1;
         String zone = (shelf <= 10) ? "Khu Can" : "Khu Vien";
