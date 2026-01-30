@@ -7,7 +7,6 @@ import java.util.Set;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
-    // ---------- Helpers: input ----------
     private static int readInt(Scanner sc, String prompt) {
         while (true) {
             System.out.print(prompt);
@@ -38,7 +37,7 @@ public class Main {
         return arr;
     }
 
-    // ---------- FR1: Two Sum (in ra cap chi so) ----------
+    // FR1:
     private static void fr1TwoSum(Scanner sc) {
         System.out.println("\n[FR1] Two Sum - Tim cap chi so i, j sao cho arr[i] + arr[j] = target");
 
@@ -67,7 +66,7 @@ public class Main {
         }
     }
 
-    // ---------- FR2: Move Zeroes (khong dung mang phu) ----------
+    // FR2:
     private static void fr2MoveZeroes(Scanner sc) {
         System.out.println("\n[FR2] Move Zeroes - Don so 0 ve cuoi, giu thu tu tuong doi");
 
@@ -92,7 +91,7 @@ public class Main {
         System.out.println("Mang sau bien doi: " + Arrays.toString(arr));
     }
 
-    // ---------- FR3: Valid Palindrome (String & Regex) ----------
+        // FR3
     private static void fr3ValidPalindrome(Scanner sc) {
         System.out.println("\n[FR3] Valid Palindrome - Kiem tra chuoi doi xung (chi tinh chu cai)");
         System.out.print("Nhap chuoi can kiem tra: ");
@@ -113,12 +112,14 @@ public class Main {
             left++;
             right--;
         }
-
-        System.out.println("Chuoi sau khi lam sach: \"" + cleaned + "\"");
-        System.out.println("Ket qua: " + isPalindrome);
+        if(isPalindrome){
+            System.out.println("Chuoi la chuoi doi xung.");
+        } else {
+            System.out.println("Chuoi khong doi xung.");
+        }
     }
 
-    // ---------- FR4: Reverse Words (Regex + 2 pointers) ----------
+    // FR4
     private static void fr4ReverseWords(Scanner sc) {
         System.out.println("\n[FR4] Reverse Words - Dao nguoc thu tu cac tu, gom khoang trang con 1" );
         System.out.print("Nhap chuoi: ");
@@ -150,7 +151,7 @@ public class Main {
         System.out.println("Ket qua: " + String.join(" ", words));
     }
 
-    // ---------- FR5: Happy Number (phat hien chu trinh) ----------
+    // FR5
     private static int sumSquareDigits(int n) {
         int sum = 0;
         while (n > 0) {
@@ -174,10 +175,10 @@ public class Main {
     private static void fr5HappyNumber(Scanner sc) {
         System.out.println("\n[FR5] Happy Number - Kiem tra so hanh phuc" );
         int n = readPositiveInt(sc, "Nhap n (so nguyen duong): ");
-        System.out.println("Ket qua: " + isHappy(n));
+
+        System.out.println("Ket qua: " + (isHappy(n)?"So hanh phuc":"Khong phai so hanh phuc"));
     }
 
-    // -------------------- Main Menu --------------------
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int choice;
